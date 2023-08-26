@@ -1,0 +1,20 @@
+function solucao(hieroglifo) {
+     let contador = 0;
+
+    for (const elemento of hieroglifo) {
+        if (typeof elemento === "string") {
+            contador++;
+        }
+    }
+
+    console.log (contador);
+}
+  
+function processData(input) {
+    let hieroglifo = input.split(" ").map(x => {
+      if (isNaN(Number(x))) return x;
+      else return Number(x);
+	});
+  
+  	solucao(hieroglifo);
+} 
